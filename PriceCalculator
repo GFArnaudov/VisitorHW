@@ -21,7 +21,7 @@ public class PriceCalculator implements ShoppingCartVisitor {
             
 		}
     
-		System.out.println("Toy: " + toy.getIsbnNumber() + " will cost: " + price);
+		System.out.println("Toy: " + toy.getName() + " will cost: " + price);
 		return price;
     
 	}
