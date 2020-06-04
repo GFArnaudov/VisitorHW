@@ -3,10 +3,10 @@ package visitor;
 public class Toy implements Product {
 
 	private int price;
-	private String isbnNumber;
+	private String name;
 	
-	public Toy(String isbnNumber, int price) {
-		this.isbnNumber = isbnNumber;
+	public Toy(String name, int price) {
+		this.name = name;
 		this.price = price;
 	}
 
@@ -14,8 +14,8 @@ public class Toy implements Product {
 		return price;
 	}
 
-	public String getIsbnNumber() {
-		return isbnNumber;
+	public String getName() {
+		return name;
 	}
 
 	@Override
