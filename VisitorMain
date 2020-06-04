@@ -6,7 +6,7 @@ public class VisitorMain {
 		
 		Product tomato = new Vegetable("Tomato", 2, 2);
 		Product cucumber = new Vegetable("Cucumber", 2, 1);
-		Product toy = new Toy("Hotwheels", 50); 
+		Product toy = new Toy("Hotwheels", 100); 
 
 		ShoppingCartVisitor priceCalculator = new PriceCalculator();
 		int priceForTomatoes = tomato.accept(priceCalculator);
