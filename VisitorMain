@@ -1,0 +1,18 @@
+package visitor;
+
+public class VisitorMain {
+
+	public static void main(String[] args) {
+		
+		Product tomato = new Vegetable("Tomato", 2, 2);
+		Product cucumber = new Vegetable("Cucumber", 2, 1);
+		Product toy = new Toy("Hotwheels", 50); 
+
+		ShoppingCartVisitor priceCalculator = new PriceCalculator();
+		int priceForTomatoes = tomato.accept(priceCalculator);
+		int priceForCucumbers = cucumber.accept(priceCalculator);
+		int priceForToy = toy.accept(priceCalculator);
+		
+	}
+
+}
