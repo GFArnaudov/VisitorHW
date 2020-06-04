@@ -1,0 +1,28 @@
+package visitor;
+
+public class PriceCalculator implements ShoppingCartVisitor {
+
+  @Override
+    public int visit(Vegetable vegetable) {
+		int price = vegetable.getPricePerKg() * vegetable.getWeight();
+		System.out.println("Vegetable: " + vegetable.getName() + " will cost: " + price);
+		return price;
+	}
+  
+  
+    @Override
+	  public int visit(Toy toy) {
+    
+		    int price = toy.getPrice();
+		
+		      if(price > 100) {
+          
+			      price = price - 5;
+            
+		}
+    
+		System.out.println("Toy: " + toy.getIsbnNumber() + " will cost: " + price);
+		return price;
+    
+	}
+      
